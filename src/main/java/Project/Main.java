@@ -1,4 +1,4 @@
-package edu.wpi.teamname;
+package Project;
 
 public class Main {
 
