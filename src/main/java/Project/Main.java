@@ -1,13 +1,13 @@
 package Project;
 
-import Project.Frontend.MainPage;
+import Project.Frontend.iconPage;
+import java.io.IOException;
 
 public class Main {
 
-  public static void main(String[] args) {
-    //    App.launch(App.class, args);
-    MainPage mainPage = new MainPage();
-    mainPage.logoPage();
-    //    mainPage.initialize();
-  }
+    public static void main(String[] args) throws IOException {
+        //        App.launch(App.class, args);
+        iconPage icon = new iconPage();
+        icon.logoPage();
+    }
 }

@@ -6,7 +6,7 @@ plugins {
     id "io.freefair.lombok" version "5.0.0-rc6"
     id 'org.openjfx.javafxplugin' version '0.0.10'
 }
-mainClassName = 'edu.wpi.teamname.Main'
+mainClassName = 'Project.Main'
 
 repositories {
     mavenCentral()
@@ -102,5 +102,8 @@ compileJava.dependsOn 'spotlessApply'
 spotless {
     java {
         googleJavaFormat()
+        indentWithTabs(2)
+        indentWithSpaces(4)
+        paddedCell()
     }
 }
