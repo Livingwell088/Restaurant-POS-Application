@@ -9,5 +9,6 @@ public class Main {
         //        App.launch(App.class, args);
         iconPage icon = new iconPage();
         icon.logoPage();
+        //        MainPage mainPage = new MainPage();
     }
 }

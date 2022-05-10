@@ -68,7 +68,6 @@ public class iconPage extends JFrame {
         button.addActionListener(e -> toMainPage());
         //        button.setOpaque(false);
         this.add(button);
-
     }
 
     private void toMainPage() {
