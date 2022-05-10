@@ -24,8 +24,25 @@ public class MenuItem {
     private double price4;
     private double price5;
 
-
-    public MenuItem(String itemID, String itemNumber, String firstName, String secondName, int category, String specialRequest, String specialRequestItem, boolean fixedPrice, int printerSetting, LocalDate dateNotAvailable, LocalTime timeNotAvailable, int color, double price0, double price1, double price2, double price3, double price4, double price5) {
+    public MenuItem(
+            String itemID,
+            String itemNumber,
+            String firstName,
+            String secondName,
+            int category,
+            String specialRequest,
+            String specialRequestItem,
+            boolean fixedPrice,
+            int printerSetting,
+            LocalDate dateNotAvailable,
+            LocalTime timeNotAvailable,
+            int color,
+            double price0,
+            double price1,
+            double price2,
+            double price3,
+            double price4,
+            double price5) {
         this.itemID = itemID;
         this.itemNumber = itemNumber;
         this.firstName = firstName;

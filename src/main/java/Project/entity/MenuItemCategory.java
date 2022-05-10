@@ -8,7 +8,8 @@ public class MenuItemCategory {
     private String specialRequest;
     private int menuType;
 
-    public MenuItemCategory(String firstName, String secondName, int category, String specialRequest, int menuType) {
+    public MenuItemCategory(
+            String firstName, String secondName, int category, String specialRequest, int menuType) {
         this.firstName = firstName;
         this.secondName = secondName;
         this.category = category;
