@@ -43,7 +43,15 @@ public class MainPage extends JFrame {
 
         JPanel orderPanel = new JPanel();
         orderPanel.setBackground(Color.DARK_GRAY);
-        orderPanel.setBounds(150, 150, 400, 700);
+        orderPanel.setBounds(75, 150, 400, 700);
+
+        JPanel configPanel = new JPanel();
+        configPanel.setBackground(Color.DARK_GRAY);
+        configPanel.setBounds(Toolkit.getDefaultToolkit().getScreenSize().width - 475, 150, 400, 700);
+
+        JPanel menuPanel = new JPanel();
+        menuPanel.setBackground(Color.DARK_GRAY);
+        menuPanel.setBounds(((configPanel.getX() + orderPanel.getX()) / 2), 500, 400, 350);
 
         JButton orderButton = new JButton();
         orderButton.setBackground(Color.white);
@@ -68,10 +76,58 @@ public class MainPage extends JFrame {
         orderButton.addActionListener(e -> onOrderButton());
         orderPanel.add(orderButton);
 
+        JButton menuButton = new JButton();
+        menuButton.setBackground(Color.WHITE);
+        menuButton.setBounds(10, 10, menuPanel.getWidth() - 20, menuPanel.getHeight() - 20);
+        menuButton.setText("Edit Orders");
+        menuButton.setFont(new Font("Helvetica Neue", Font.ITALIC, 72));
+        menuButton.setBorder(BorderFactory.createEtchedBorder());
+        menuButton.setFocusable(false);
+        InputStream menuInput = getClass().getClassLoader().getResourceAsStream("images/edit.jpg");
+        ImageIcon menu = new ImageIcon(ImageIO.read(menuInput));
+        menu =
+                new ImageIcon(
+                        menu.getImage()
+                                .getScaledInstance(
+                                        menuPanel.getWidth() / 2,
+                                        menuPanel.getWidth() / 2,
+                                        java.awt.Image.SCALE_SMOOTH));
+        menuButton.setIcon(menu);
+        menuButton.setVerticalTextPosition(JButton.TOP);
+        menuButton.setHorizontalTextPosition(JButton.CENTER);
 
+        JButton configButton = new JButton();
+        configButton.setBackground(Color.WHITE);
+        configButton.setBounds(10, 10, configPanel.getWidth() - 20, configPanel.getHeight() - 20);
+        configButton.setText("Configurations");
+        configButton.setFont(new Font("Helvetica Neue", Font.ITALIC, 45));
+        configButton.setBorder(BorderFactory.createEtchedBorder());
+        configButton.setFocusable(false);
+        InputStream configInput =
+                getClass().getClassLoader().getResourceAsStream("images/configure.png");
+        ImageIcon config = new ImageIcon(ImageIO.read(configInput));
+        config =
+                new ImageIcon(
+                        config
+                                .getImage()
+                                .getScaledInstance(
+                                        orderPanel.getWidth() - 40,
+                                        orderPanel.getWidth() - 40,
+                                        java.awt.Image.SCALE_SMOOTH));
+        configButton.setIcon(config);
+        configButton.setVerticalTextPosition(JButton.TOP);
+        configButton.setHorizontalTextPosition(JButton.CENTER);
+
+        configPanel.setLayout(null);
+        configPanel.add(configButton);
+
+        menuPanel.setLayout(null);
+        menuPanel.add(menuButton);
 
         orderPanel.setLayout(null);
         this.add(orderPanel);
+        this.add(configPanel);
+        this.add(menuPanel);
         this.setVisible(true);
     }
 
