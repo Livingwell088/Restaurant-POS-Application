@@ -68,15 +68,7 @@ public class MainPage extends JFrame {
         orderButton.addActionListener(e -> onOrderButton());
         orderPanel.add(orderButton);
 
-        //        orderPanel.setPreferredSize();
 
-        //        JFrame frame = new JFrame();
-        //        frame.setTitle("Restaurant POS Application");
-        //        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        //        frame.setLayout(null);
-        //        frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
-        //        frame.setResizable(false);
-        //        frame.setSize(500, 500);
 
         orderPanel.setLayout(null);
         this.add(orderPanel);
